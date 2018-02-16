@@ -7,7 +7,7 @@ feature 'When a user visits a vending machine show page' do
     snack = Snack.create(name: "Twix", price: 1, machine: dons)
 
     visit machine_path(dons)
-
+save_and_open_page
     expect(page).to have_content("Don's Mixed Drinks Vending Machine")
     expect(page).to have_content("Twix")
   end
